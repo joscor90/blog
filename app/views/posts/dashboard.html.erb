@@ -1,8 +1,14 @@
 <h1>Create your post!</h1>
 
-<% form_with(model: @post, url: posts_create_path, local: true) do |f|%>
+<%= form_with(model: @post, url: posts_create_path, local: true) do |f|%>
+    <%= label_tag "title", "Title" %>
     <%= f.text_field :title %>
+    
+    <%= label_tag "image_url", "Image URL" %>
     <%= f.text_field :image_url %>
+
+    <%= label_tag "content", "Content" %>
     <%= f.text_field :content %>
-    <% f.submit 'Post it!' %>
+
+    <%= f.submit 'Post it!' %>
 <% end %>
