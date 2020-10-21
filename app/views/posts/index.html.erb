@@ -11,6 +11,9 @@
         <th>
             Content
         </th>
+        <th>
+            Created at
+        </th>
     </tr>
     <% @posts.each do |post| %>
     <tr>
@@ -18,10 +21,13 @@
             <%= post.title %>
         </td>
         <td>
-            <%= image_tag "#{post.image_url}" %>
+            <%= image_tag post.image_url %>
         </td>
         <td>
             <%= post.content %>
+        </td>
+        <td>
+            <%= post.created_at %>
         </td>
     </tr>
     <% end %>

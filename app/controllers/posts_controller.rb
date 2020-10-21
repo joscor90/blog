@@ -10,11 +10,11 @@ class PostsController < ApplicationController
   def create 
     @post = Post.new(post_params)
     @post.save
-    redirect_to posts_dashboard_path
   end
 
   private
   def post_params
     params.require(:post).permit(:title, :image_url, :content)
   end
+  http_basic_authenticate_with name: "desafiovamoscontodo", password: "XAHTJEAS23123%23", only: :dashboard
 end
