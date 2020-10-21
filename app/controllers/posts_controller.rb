@@ -7,6 +7,13 @@ class PostsController < ApplicationController
   end
 
   def create 
-    @post = Post.new(title: params[:title], image_url: params[:image_url], content: params[:content])
+    @post = Post.new(post_params)
+    @post.save
+    redirect_to posts_dashboard_path
+  end
+
+  private
+  def post_params
+    params.require(:post).permit(:title, :image_url, :content)
   end
 end
