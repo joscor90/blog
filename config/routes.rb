@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "/"
   get 'posts/index'
   get 'posts/dashboard'
   post 'posts/create'
