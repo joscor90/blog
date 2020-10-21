@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 
   def create 
     @post = Post.new(post_params)
+    @post.content = @post.content.gsub("chau", "")
     @post.save
   end
 
