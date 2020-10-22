@@ -9,6 +9,10 @@ from being saved:</h2>
         <% end %>
         </ul>
     </div>
+    <%= link_to 'Take me back to the index', posts_index_path %>
+    <%= link_to 'Create another post', posts_dashboard_path %>
 <% else %>
-<h1> Your post was successfully saved! </h1>
+    <h1> Your post was successfully saved! </h1>
+    <%= link_to 'Take me back to the index', posts_index_pat %>
+    <%= link_to 'Create another post', posts_dashboard_path  %>
 <% end %>
